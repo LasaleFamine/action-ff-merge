@@ -32,3 +32,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+## License
+
+MIT © [LasaleFamine](https://github.com/LasaleFamine)

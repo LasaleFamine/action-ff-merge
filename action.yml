@@ -1,0 +1,16 @@
+name: 'Action FF Merge'
+description: 'Action to merge a pull request with FF'
+author: 'LasaleFamine'
+inputs:
+  from:
+    description: 'Branch to merge'
+    required: true
+  to:
+    description: 'Branch that will be updated'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'git-merge'
+  color: 'purple'

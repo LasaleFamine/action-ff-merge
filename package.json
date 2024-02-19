@@ -1,6 +1,6 @@
 {
   "name": "actions-ff-merge",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "GitHub Action to merge a pull request with Fast Forward",
   "keywords": [
     "merge",

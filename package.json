@@ -21,7 +21,7 @@
     "prepare": "husky install"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "lint-staged": {
     "*.ts": "eslint"

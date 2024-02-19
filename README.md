@@ -16,14 +16,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # Fetch the whole history to prevent unrelated history errors
           fetch-depth: '0'
           # The branch you want to checkout (usually equal to `from`)
           ref: 'master'
       - name: Merge Fast Forward
-        uses: LasaleFamine/action-ff-merge@v1
+        uses: LasaleFamine/action-ff-merge@v2
         with:
           # Branch to merge
           from: master

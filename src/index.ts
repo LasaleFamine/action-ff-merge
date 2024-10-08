@@ -2,7 +2,7 @@ import * as core from '@actions/core';
 import * as exec from '@actions/exec';
 import * as Github from '@actions/github';
 
-const ghClient = process.env.GITHUB_TOKEN ? Github.getOctokit(process.env.GITHUB_TOKEN) : null;
+const ghClient = process.env['GITHUB_TOKEN'] ? Github.getOctokit(process.env['GITHUB_TOKEN']) : null;
 
 const { GITHUB_REPOSITORY = '' } = process.env;
 
@@ -43,6 +43,7 @@ const run = async (): Promise<void> => {
   const [owner] = GITHUB_REPOSITORY.split('/');
 
   if (!ghClient) throw new Error('Failed to load Github client from token.');
+  if (!owner) throw new Error('Failed to parse owner from repository.');
 
   const {
     data: { email },
